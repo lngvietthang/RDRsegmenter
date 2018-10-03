@@ -1,3 +1,5 @@
+package src.main.java;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -21,7 +23,7 @@ public class RDRsegmenter
     public RDRsegmenter()
         throws IOException
     {
-        this.constructTreeFromRulesFile("Model.RDR");
+        this.constructTreeFromRulesFile("src/main/java/Model.RDR");
     }
 
     private void constructTreeFromRulesFile(String rulesFilePath)
@@ -282,7 +284,8 @@ public class RDRsegmenter
     {
         RDRsegmenter segmenter = new RDRsegmenter();
 
-        segmenter.segmentRawCorpus(args[0]);
+        String outStr1 = segmenter.segmentRawString("chơi bài hát em của ngày hôm qua của Sơn Tùng");
+        System.out.println(outStr1);
 
         // Get output of input test set for evaluation
         // segmenter.segmentTokenizedCorpus("data/Test.txt");

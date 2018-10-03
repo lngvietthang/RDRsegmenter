@@ -1,3 +1,5 @@
+package src.main.java;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,7 +13,7 @@ public class Vocabulary
     static {
         VN_DICT = new HashSet<String>();
         try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("VnVocab"));
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("src/main/java/VnVocab"));
             VN_DICT = (Set<String>) ois.readObject();
             ois.close();
         }
